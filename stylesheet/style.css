@@ -1,0 +1,33 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  color: #fff;
+  background-color: #282828;
+}
+article section{
+  border: 1px solid #eee;
+  padding: 2px;
+  margin: 5px;
+  font-size: 20px;
+}
+
+
+nav{
+  color: #cc4;
+  border: 0.1px solid #eee;
+  border-radius: 2;
+  padding: 2px;
+  margin: 2px 5px 2px 5px;
+}
+nav a{
+  color: #ff0;
+  text-decoration: none;
+  padding: 1px;
+}
+nav > div{
+  color: #ddd;
+}
+@media  {
+
+}
