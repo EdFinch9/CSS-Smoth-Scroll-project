@@ -11,14 +11,32 @@ header{
   background-color: #000;
   border-radius: 20px;
 }
-article section{
+header > a{
+  text-decoration: none;
+  color: inherit;
+}
+main section {
+  cursor: default;
+  background-color: #479097;
   border: 1px solid #000;
   padding: 2px;
-  margin: 5px;
+  margin: 15px 5px 15px 5px;
   font-size: 20px;
   text-shadow: 1px -1px 0 #000;
 }
-article #sectionNum{
+
+main section::selection {
+  color: inherit;
+  background-color: #499299;
+  cursor: text;
+}
+
+main section::-moz-selection {
+  color: inherit;
+  background-color: #297279;
+  cursor: text;
+}
+main .sectionNum{
   color: #000;
   background-color: #91C7B3;
   border: 2px solid #282828;
@@ -31,11 +49,12 @@ nav{
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  color: #ddd;
-  background-color: #242a41;
+  color: #000;
+  background-color: rgba(238, 238, 238, 0.2);
   border: 0.1px solid #000;
   padding: 5px;
   margin: 2px 5px 2px 5px;
+
 }
 nav a{
   color: #242a41;
@@ -45,13 +64,28 @@ nav a{
   margin: 10px;
   border: 1px solid #111;
 }
+nav:hover{
+  animation: background-opacity 3s;
+}
+@keyframes background-opacity {
+  0% {background-color: rgba(238, 238, 238, 0.2);}
+  100% {background-color: rgba(238, 238, 238, 0.8);}
+}
 nav a:hover{
   color: #fff;
   background-color: #242a41;
 }
-nav > div{
-  color: #FCFBFA;
+nav > .atLeft{
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-@media  {
-
+nav > div{
+  color: #222;
+}
+@media only screen and (max-width: 600px) {
+  nav > .atLeft{
+    position: static;
+    display: block;
+  }
 }
