@@ -66,6 +66,7 @@ nav a{
 }
 nav:hover{
   animation: background-opacity 3s;
+  animation-fill-mode: forwards;
 }
 @keyframes background-opacity {
   0% {background-color: rgba(238, 238, 238, 0.2);}
